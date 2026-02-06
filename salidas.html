@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salida de Inventario</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<button class="btn-volver" onclick="window.location.href='index.html'">
+  Volver al Índice
+</button>
+
+
+
+<div class="page" id="form3">
+<button id="downloadPDF" class="btn-accion">Descargar PDF</button>
+
+<h1>Autorización de Salida de Inventario / Producto Terminado</h1>
+<h2>Área: Almacén / Logística</h2>
+<p><strong>Caso de uso:</strong> Entrega de productos a clientes, muestras o traslados internos.</p>
+
+<table>
+<tr><th>Concepto</th><th>Detalle</th></tr>
+<tr><td>Solicitante</td><td>Diego Gil</td></tr>
+<tr><td>Producto</td><td><input type="text"></td></tr>
+<tr><td>Cantidad</td><td><input type="text"></td></tr>
+<tr><td>Cliente / Destino</td><td><input type="text"></td></tr>
+<tr><td>Fecha de salida</td><td><input type="text" placeholder="dd/mm/aaaa"></td></tr>
+<tr><td>Motivo</td><td><input type="text"></td></tr>
+</table>
+
+<table class="autorizaciones">
+<tr><th>Cargo</th><th>Nombre</th><th>Firma</th><th>Fecha</th></tr>
+<tr><td>Almacenista</td><td>Diego Gil</td><td><input type="text"></td><td><input type="text"></td></tr>
+<tr><td>Director Financiero</td><td>Francisco Loaiza Lizárraga</td><td><input type="text"></td><td><input type="text"></td></tr>
+</table>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js" defer></script>
+
+</body>
+</html>

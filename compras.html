@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autorización de Compras</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<button class="btn-volver" onclick="window.location.href='index.html'">
+  Volver al Índice
+</button>
+
+
+
+<div class="page" id="form1">
+<button id="downloadPDF" class="btn-accion">Descargar PDF</button>
+
+<h1>Autorización de Compras / Materia Prima</h1>
+<h2>Área: Dirección Financiera y Administración</h2>
+<p><strong>Caso de uso:</strong> Compra de materia prima, insumos o servicios.</p>
+
+<table>
+<tr><th>Concepto</th><th>Detalle</th></tr>
+<tr><td>Solicitante</td><td>Rubén Cortés</td></tr>
+<tr><td>Área / Departamento</td><td><input type="text"></td></tr>
+<tr><td>Fecha de solicitud</td><td><input type="text" placeholder="dd/mm/aaaa"></td></tr>
+<tr><td>Descripción del bien o servicio</td><td><input type="text"></td></tr>
+<tr><td>Cantidad / Unidad</td><td><input type="text"></td></tr>
+<tr><td>Proveedor</td><td><input type="text"></td></tr>
+<tr><td>Costo total</td><td><input type="text"></td></tr>
+</table>
+
+<table class="autorizaciones">
+<tr><th>Cargo</th><th>Nombre</th><th>Firma</th><th>Fecha</th></tr>
+<tr><td>Director Financiero</td><td>Francisco Loaiza Lizárraga</td><td><input type="text"></td><td><input type="text"></td></tr>
+<tr><td>Director General</td><td>Federico Gabriel García Ortega</td><td><input type="text"></td><td><input type="text"></td></tr>
+</table>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js" defer></script>
+
+</body>
+</html>

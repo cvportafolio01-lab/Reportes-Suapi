@@ -446,3 +446,51 @@ h2 {
     display: none;
   }
 }
+
+
+#factura {
+    width: 210mm;
+    padding: 10mm;
+    background: white;
+}
+
+table {
+    page-break-inside: avoid;
+}
+
+
+/* MUY IMPORTANTE PARA MOBILE */
+@media screen and (max-width: 768px) {
+    .page {
+        width: auto;
+        min-height: auto;
+        padding: 10px;
+    }
+}
+/* Contenedor para permitir scroll horizontal en móviles si es necesario */
+.autorizaciones-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+
+/* Inputs dentro de la tabla */
+.autorizaciones input[type="text"] {
+  width: 100%;
+  box-sizing: border-box; /* padding no rompe la celda */
+  font-size: 14px;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+/* Adaptación móvil: más legible en pantallas pequeñas */
+@media (max-width: 600px) {
+  .autorizaciones {
+    font-size: 12px;
+  }
+
+  .autorizaciones th,
+  .autorizaciones td {
+    padding: 6px 4px;
+  }
+}

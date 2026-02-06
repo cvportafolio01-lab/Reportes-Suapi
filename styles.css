@@ -329,3 +329,120 @@ nav ul li a:focus {
     background-color: #218838; /* verde más oscuro al pasar el mouse */
 }
 
+
+
+/* ============================= */
+/* OPTIMIZACIÓN MOBILE REAL */
+/* ============================= */
+
+/* Viewport correcto (en HTML)
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+*/
+
+/* Mejor manejo de altura en iOS */
+body {
+  min-height: 100svh;
+  -webkit-text-size-adjust: 100%;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Contenedores más respirables en móvil */
+.container,
+.page {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Navegación táctil */
+nav ul li a {
+  min-height: 48px; /* recomendado Google/Apple */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Quitar hover forzado en móviles */
+@media (hover: none) {
+  nav ul li a:hover {
+    background-color: transparent;
+    color: #3498db;
+    box-shadow: none;
+  }
+}
+
+/* Botones táctiles */
+button,
+.print-btn,
+.btn-volver,
+.btn-accion {
+  min-height: 48px;
+  width: 100%;
+  max-width: 100%;
+  font-size: 16px; /* evita zoom automático en iOS */
+}
+
+/* Logo responsive */
+.empresa-logo img {
+  max-width: 140px;
+}
+
+/* Tipografía mobile */
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+/* ============================= */
+/* TABLAS RESPONSIVAS */
+/* ============================= */
+
+.page table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.page table th,
+.page table td {
+  font-size: 0.9rem;
+  padding: 10px;
+}
+
+/* ============================= */
+/* MEDIA QUERY EXTRA PEQUEÑOS */
+/* ============================= */
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .page {
+    padding: 18px 15px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* ============================= */
+/* PRINT FIX (ERROR CORREGIDO) */
+/* ============================= */
+
+@media print {
+  nav,
+  body > h1,
+  body > h2 {
+    display: none;
+  }
+}
